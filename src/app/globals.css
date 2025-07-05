@@ -3,13 +3,301 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --font-avenir-black: 'avenir-black';
+  --font-avenir-black-oblique: 'avenir-black-oblique';
+  --font-avenir-book: 'avenir-book';
+  --font-avenir-book-oblique: 'avenir-book-oblique';
+  --font-avenir-heavy: 'avenir-heavy';
+  --font-avenir-heavy-oblique: 'avenir-heavy-oblique';
+  --font-avenir-light: 'avenir-light';
+  --font-avenir-light-oblique: 'avenir-light-oblique';
+  --font-avenir-medium: 'avenir-medium';
+  --font-avenir-medium-oblique: 'avenir-medium -oblique';
+  --font-avenir-oblique: 'avenir-oblique';
+  --font-avenir-roman: 'avenir-roman';
+
+  --font-montserrat-black:'montserrat-black';
+  --font-montserrat-black-italic:'montserrat-black-italic';
+  --font-montserrat-bold: 'montserrat-bold';
+  --font-montserrat-bold-ttf: 'montserrat-bold-ttf';
+  --font-montserrat-bold-italic: 'montserrat-bold-italic';
+  --font-montserrat-extra-bold: 'montserrat-extra-bold';
+  --font-montserrat-extra-bold-italic: 'montserrat-extra-bold-italic';
+  --font-montserrat-extra-light: 'montserrat-extra-light';
+  --font-montserrat-extra-light-italic: 'montserrat-extra-light-italic';
+  --font-montserrat-italic: 'montserrat-italic';
+  --font-montserrat-light: 'montserrat-light';
+  --font-montserrat-light-italic: 'montserrat-light-italic';
+  --font-montserrat-medium: 'montserrat-medium';
+  --font-montserrat-medium-italic: 'montserrat-medium-italic';
+  --font-montserrat-regular: 'montserrat-regular';
+  --font-montserrat-semibold: 'montserrat-semibold';
+  --font-montserrat-semibold-italic: 'montserrat-semibold-italic';
+  --font-montserrat-thin: 'montserrat-thin';
+  --font-montserrat-thin-italic: 'montserrat-thin-italic';       
+}
+
+/*Avenir font family*/
+@font-face {
+  font-family: 'avenir-black';
+  src: url('/fonts/avenir/Avenir-Black.ttf') format('truetype');
+  font-weight: black;
+  font-style: black;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'avenir-black-oblique';
+  src: url('/fonts/avenir/Avenir-BlackOblique.ttf') format('truetype');
+  font-weight: blackOblique;
+  font-style: blackOblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'avenir-book';
+  src: url('/fonts/avenir/Avenir-Book.ttf') format('truetype');
+  font-weight: book;
+  font-style: book;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'avenir-book-oblique';
+  src: url('/fonts/avenir/Avenir-BookOblique.ttf') format('truetype');
+  font-weight: bookOblique;
+  font-style: bookOblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'avenir-heavy';
+  src: url('/fonts/avenir/Avenir-Heavy.ttf') format('truetype');
+  font-weight: heavy;
+  font-style: heavy;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'avenir-heavy-oblique';
+  src: url('/fonts/avenir/Avenir-HeavyOblique.ttf') format('truetype');
+  font-weight: heavyOblique;
+  font-style: heavyOblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'avenir-light';
+  src: url('/fonts/avenir/Avenir-Light.ttf') format('truetype');
+  font-weight: light;
+  font-style: light;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'avenir-light-oblique';
+  src: url('/fonts/avenir/Avenir-LightOblique.ttf') format('truetype');
+  font-weight: lightOblique;
+  font-style: lightOblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'avenir-medium';
+  src: url('/fonts/avenir/Avenir-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: medium;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'avenir-medium-oblique';
+  src: url('/fonts/avenir/Avenir-MediumOblique.ttf') format('truetype');
+  font-weight: mediumOblique;
+  font-style: mediumOblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'avenir-oblique';
+  src: url('/fonts/avenir/Avenir-Oblique.ttf') format('truetype');
+  font-weight: oblique;
+  font-style: oblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'avenir-roman';
+  src: url('/fonts/avenir/Avenir-Roman.ttf') format('truetype');
+  font-weight: roman;
+  font-style: roman;
+  font-display: swap;
+}
+
+/*Montserrat font family*/
+@font-face {
+  font-family: 'montserrat-black';
+  src: url('/fonts/montserat/Montserrat-Black.otf') format('Opentype');
+  font-weight: black;
+  font-style: black;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-black-italic';
+  src: url('/fonts/montserat/Montserrat-BlackItalic.otf') format('opentype');
+  font-weight: BlackItalic;
+  font-style: BlackItalic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-bold';
+  src: url('/fonts/montserat/Montserrat-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: bold;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-bold-ttf';
+  src: url('/fonts/montserat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-bold-italic';
+  src: url('/fonts/montserat/Montserrat-BoldItalic.ttf') format('truetype');
+  font-weight: BoldItalic;
+  font-style: BoldItalic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-extra-bold';
+  src: url('/fonts/montserat/Montserrat-ExtraBold.otf') format('opentype');
+  font-weight: ExtraBold;
+  font-style: ExtraBold;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-extra-bold-italic';
+  src: url('/fonts/montserat/Montserrat-ExtraBoldItalic.otf') format('opentype');
+  font-weight: ExtraBoldItalic;
+  font-style: ExtraBoldItalic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-extra-light';
+  src: url('/fonts/montserat/Montserrat-ExtraLight.otf') format('opentype');
+  font-weight: ExtraLight;
+  font-style: ExtraLight;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-extra-light-italic';
+  src: url('/fonts/montserat/Montserrat-ExtraLightItalic.otf') format('opentype');
+  font-weight: LightItalic;
+  font-style: LightItalic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-italic';
+  src: url('/fonts/montserat/Montserrat-Italic.ttf') format('truetype');
+  font-weight: italic;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-light';
+  src: url('/fonts/montserat/Montserrat-Light.otf') format('opentype');
+  font-weight: light;
+  font-style: light;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-light-italic';
+  src: url('/fonts/montserat/Montserrat-LightItalic.otf') format('opentype');
+  font-weight: LightItalic;
+  font-style: LightItalic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-medium';
+  src: url('/fonts/montserat/Montserrat-Medium.otf') format('opentype');
+  font-weight: medium;
+  font-style: medium;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-medium-italic';
+  src: url('/fonts/montserat/Montserrat-MediumItalic.otf') format('opentype');
+  font-weight: MediumItalic;
+  font-style: MediumItalic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-regular';
+  src: url('/fonts/montserat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: regular;
+  font-style: regular;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-semibold';
+  src: url('/fonts/montserat/Montserrat-SemiBold.otf') format('opentype');
+  font-weight: semibold;
+  font-style: semibold;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-semibold-italic';
+  src: url('/fonts/montserat/Montserrat-SemiBoldItalic.otf') format('opentype');
+  font-weight: Italic;
+  font-style: Italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-thin';
+  src: url('/fonts/montserat/Montserrat-Thin.otf') format('opentype');
+  font-weight: Thin;
+  font-style: Thin;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'montserrat-ThinItalic';
+  src: url('/fonts/montserat/Montserrat-ThinItalic.otf') format('opentype');
+  font-weight: ThinItalic;
+  font-style: ThinItalic;
+  font-display: swap;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  --font-avenir-black: var(--font-avenir-black);
+  --font-avenir-black-oblique: var(--font-avenir-black-oblique);
+  --font-avenir-book: var(--font-avenir-book);
+  --font-avenir-book-oblique: var(--font-avenir-book-oblique);
+  --font-avenir-heavy: var(--font-avenir-heavy);
+  --font-avenir-heavy-oblique: var(--font-avenir-heavy-oblique);
+  --font-avenir-light: var(--font-avenir-light);
+  --font-avenir-light-oblique: var(--font-avenir-light-oblique);
+  --font-avenir-medium: var(--font-avenir-medium);
+  --font-avenir-medium-oblique: var(--font-avenir-medium-oblique);
+  --font-avenir-oblique: var(--font-avenir-oblique);
+  --font-avenir-roman: var(--font-avenir-roman);
+
+  --font-montserrat-black: var(--font-montserrat-black);
+  --font-montserrat-black-italic: var(--font-montserrat-black-italic);
+  --font-montserrat-bold: var(--font-montserrat-bold);
+  --font-montserrat-bold-ttf: var(--font-montserrat-bold-ttf);
+  --font-montserrat-bold-italic: var(--font-montserrat-bold-italic);
+  --font-montserrat-extra-bold: var(--font-montserrat-extra-bold);
+  --font-montserrat-extra-bold-italic: var(--font-montserrat-extra-bold-italic);
+  --font-montserrat-extra-light: var(--font-montserrat-extra-light);
+  --font-montserrat-extra-light-italic: var(--font-montserrat-extra-light-italic);
+  --font-montserrat-italic: var(--font-montserrat-italic);
+  --font-montserrat-light: var(--font-montserrat-light);
+  --font-montserrat-light-italic: var(--font-montserrat-light-italic);
+  --font-montserrat-medium: var(--font-montserrat-medium);
+  --font-montserrat-medium-italic: var(--font-montserrat-medium-light);
+  --font-montserrat-regular: var(--font-montserrat-regular);
+  --font-montserrat-semibold: var(--font-montserrat-semibold);
+  --font-montserrat-smeibold-italic: var(--font-montserrat-semibold-italic);
+  --font-montserrat-thin: var(--font-montserrat-thin);
+  --font-montserrat-thin-italic: var(--font-montserrat-thin-italic);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +310,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif,avenir-black,avenir-black-oblique,avenir-book,avenir-book-oblique,avenir-heavy,avenir-heavy-oblique,avenir-light,avenir-light-oblique,avenir-medium,avenir-medium-oblique,avenir-oblique,avenir-roman,montserrat-black,montserrat-black-italic,montserrat-bold,montserrat-bold-ttf,montserrat-bold-italic,montserrat-extra-bold,montserrat-extra-bold-italic,montserrat-extra-light,montserrat-extra-light-italic,montserrat-italic,montserrat-light,montserrat-light-italic,montserrat-medium,montserrat-medium-italic,montserrat-regular,montserrat-semibold,montserrat,semibold-italic,montserrat-thin,montserrat-thin-italic;
 }
