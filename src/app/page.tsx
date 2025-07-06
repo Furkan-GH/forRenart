@@ -1,6 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import { FaStar } from 'react-icons/fa';
+
+import { FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 
@@ -33,21 +36,35 @@ export default function Home() {
           {Array.from({ length: 8 }).map((_, i) => (
             <div
               key={i}
-              className="inline-block w-[200px] mx-2"
+              className="inline-block w-[250px] h-[350px] mx-5"
             >
               <Image
-                src="/vercel.svg"
+                src="/favicon.ico"
                 alt="Product"
                 width={200}
                 height={200}
-                className="rounded-md"
+                className="rounded-md my-5"
               />
-              <h2 className="text-center text-sm mt-2">Product Name</h2>
-              <p className="text-center text-xs text-gray-600">$101.00</p>
+              <div><p className='font-montserrat-medium text-[15]'>Product Title</p></div>
+              <div><p className='font-montserrat-regular text-[15]'>$101.00 USD</p></div>
+              <div>renkler</div>
+              <div><p className='font-avenir-book text-[12]'>Yellow Gold</p></div>
+              <div>
+                <div className="flex items-center gap-1 mt-1">
+                  <FaStar size={20} />
+                  <FaStar size={20} />
+                  <FaStarHalfAlt size={20} />
+                  <FaRegStar size={20} />
+                  <FaRegStar size={20} />
+                  <span className="ml-2 text-sm">(2.5 Stars)</span>
+                </div>
+              </div>
+              
             </div>
           ))}
+        
         </div>
-
+            
         <MdChevronRight
           onClick={slideRight}
           size={40}
