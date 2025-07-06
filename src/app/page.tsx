@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import { FaStar } from 'react-icons/fa';
-
 import { FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
@@ -17,6 +16,16 @@ export default function Home() {
     const slider = document.getElementById('slider');
     if (slider) slider.scrollLeft += 500;
   };
+
+  const colors = {
+    yellowGold:"#E6CA97",
+    whiteGold:"#D9D9D9",
+    roseGold:"#E1A4A9"
+  }
+
+  const stars = Array(5).fill(0)
+  const rating = 3;
+
   return (
     <>
     <div className="w-full flex justify-center items-end h-48">
@@ -47,16 +56,29 @@ export default function Home() {
               />
               <div><p className='font-montserrat-medium text-[15]'>Product Title</p></div>
               <div><p className='font-montserrat-regular text-[15]'>$101.00 USD</p></div>
-              <div>renkler</div>
+              <div className='flex items-center gap-2 mt-1'>
+                <button className='rounded-full w-5 h-5' style={{backgroundColor: colors.yellowGold}}></button>
+                <button className='rounded-full  w-5 h-5' style={{backgroundColor: colors.whiteGold}}></button>
+                <button className='rounded-full  w-5 h-5' style={{backgroundColor: colors.roseGold}}></button>
+              </div>
               <div><p className='font-avenir-book text-[12]'>Yellow Gold</p></div>
               <div>
-                <div className="flex items-center gap-1 mt-1">
-                  <FaStar size={20} />
-                  <FaStar size={20} />
-                  <FaStarHalfAlt size={20} />
-                  <FaRegStar size={20} />
-                  <FaRegStar size={20} />
-                  <span className="ml-2 text-sm">(2.5 Stars)</span>
+                <div className='flex items-center gap-1 mt-1'>
+                  {stars.map((_, index) => {
+                    const filled = index + 1 <= Math.floor(rating);
+                    const isHalf = index + 0.5 === rating;
+                    if (filled){
+                      return <FaStar key={index} size={20} color="#E6CA97" />;
+                    }
+                    else if(isHalf){
+                      return <FaStarHalfAlt key={index} size={20} color="#E6CA97" />;
+                    }
+                    else{
+                      return <FaRegStar key={index} size={20} color="#D9D9D9" />;
+                    }
+                  })
+
+                  }
                 </div>
               </div>
               
