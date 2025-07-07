@@ -1,11 +1,17 @@
 'use client';
 
 import Image from 'next/image';
+import {  useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
-
+  const colors = {
+    yellowGold:"#E6CA97",
+    whiteGold:"#D9D9D9",
+    roseGold:"#E1A4A9"
+  }
+  
 export default function Home() {
   const slideLeft = () => {
     const slider = document.getElementById('slider');
@@ -17,11 +23,11 @@ export default function Home() {
     if (slider) slider.scrollLeft += 500;
   };
 
-  const colors = {
-    yellowGold:"#E6CA97",
-    whiteGold:"#D9D9D9",
-    roseGold:"#E1A4A9"
-  }
+  const [selectedColor, setSelectedColor] = useState<string>("yellowGold");
+
+  const handleColorClick = (color: string) => {
+    setSelectedColor(color);
+  };
 
   const stars = Array(5).fill(0)
   const rating = 3;
@@ -56,10 +62,17 @@ export default function Home() {
               />
               <div><p className='font-montserrat-medium text-[15]'>Product Title</p></div>
               <div><p className='font-montserrat-regular text-[15]'>$101.00 USD</p></div>
-              <div className='flex items-center gap-2 mt-1'>
-                <button className='rounded-full w-5 h-5' style={{backgroundColor: colors.yellowGold}}></button>
-                <button className='rounded-full  w-5 h-5' style={{backgroundColor: colors.whiteGold}}></button>
-                <button className='rounded-full  w-5 h-5' style={{backgroundColor: colors.roseGold}}></button>
+              <div className='flex items-center gap-2 mt-4 my-2'>
+                  {Object.entries(colors).map(([name, value]) => (
+                  <button
+                    key={name}
+                    onClick={() => handleColorClick(name)}
+                    className={`rounded-full w-5 h-5 transition-all ${
+                    selectedColor === name ? 'outline-1 outline-black outline-offset-2' : ''
+                    }`}
+                    style={{ backgroundColor: value }}
+                  ></button>
+                  ))}
               </div>
               <div><p className='font-avenir-book text-[12]'>Yellow Gold</p></div>
               <div>
