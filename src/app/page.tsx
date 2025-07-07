@@ -1,4 +1,4 @@
-import ProductSlider from './components/productSlider';
+import ProductSlider from './components/ProductSlider';
 import { getProducts } from './lib/getProducts';
   
 export default async function Home() {
